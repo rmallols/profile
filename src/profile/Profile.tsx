@@ -19,7 +19,6 @@ const Profile: React.FC = () => {
                 setUser(await fetchData(`/api/users/${userId}`));
                 setLoading(false);
             } catch (ex) {
-                console.log('NAAAIN')
                 history.push('/not-found');
             }
         };
@@ -35,14 +34,18 @@ const Profile: React.FC = () => {
             <div className="Profile">
                 <div className="Profile-summary is-text-centered">
                     <img src={`/api/users/${userId}/avatar`} alt={name || ''} />
-                    <h1>{name}</h1>
-                    <h2>{jobTitle}</h2>
+                    <h1 role="Profile-name">{name}</h1>
+                    <h2 role="Profile-jobTitle">{jobTitle}</h2>
                 </div>
                 <div className="Profile-details">
                     <h3>About me:</h3>
-                    {bio?.map((paragraph: string) => <p key={paragraph}>{paragraph}</p>)}
+                    {
+                        bio?.map((paragraph: string) => (
+                            <p key={paragraph} role="Profile-bio">{paragraph}</p>
+                        ))
+                    }
                     <h3>My hobbies:</h3>
-                    <p>{hobbies?.join(', ')}</p>
+                    <p role="Profile-hobbies">{hobbies?.join(', ')}</p>
                     <h3>My favourite food:</h3>
                     <p>
                         {favouriteFood?.map(({ name, link }: FavouriteFood) => (
@@ -61,16 +64,16 @@ const Profile: React.FC = () => {
         );
 };
 
-interface ProfileParams {
-    userId: string;
-};
-
 interface User {
     name: string;
     jobTitle: string;
     bio: string[];
     hobbies: string[];
     favouriteFood: FavouriteFood[];
+};
+
+interface ProfileParams {
+    userId: string;
 };
 
 interface FavouriteFood {

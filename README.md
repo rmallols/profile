@@ -12,10 +12,10 @@ This sample project demonstrates the creation of a profile page, including:
 - React Hooks
 - CSS
 
-## Supported features 🕵️‍♂️
-* Mobile first, responside design
+## Supported features
+* Mobile first, responsive design
 * URL-driven
-* Redirection to a not found page on invalid users
+* Error handling (e.g. redirection to a "not found" page on invalid users)
 
 ## Proposed changes
 1. Add a CSS preprocessor (e.g. with [Sass](https://sass-lang.com/)).
@@ -26,3 +26,12 @@ This sample project demonstrates the creation of a profile page, including:
 ).
 5. Introduce [Prettier](https://prettier.io/) to ensure and automatically 
 format the code base according to the team's styling guidelines.
+
+## Installing dependencies
+`npm i`
+
+## Running the app
+`npm start`
+
+## Testing the app
+`npm test`

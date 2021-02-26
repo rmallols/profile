@@ -1,3 +1,10 @@
+html {
+    min-height: 100%;
+    background-color: rgb(35, 37, 48);
+    color: white;
+    font-size: 18px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +14,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3 {
+    margin: 5px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: rgb(0, 170, 239);
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: rgb(233, 251, 123);;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: rgb(178, 76, 174);
+}
+
+a {
+    color: rgb(0, 195, 91);
 }

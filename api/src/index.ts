@@ -15,5 +15,5 @@ app.use('/api', routes);
 
 // Listen
 app.listen(4000, () => {
-  debug('Listening at http://localhost:4000')
+    debug('Listening at http://localhost:4000');
 });
